@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> update Employee</h3>
+            <hr/>
+            <div class="card-body" *ngIf="employee">
+                <form #f="ngForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group" *ngIf="employee"> 
+                        <label>Emp ID</label>
+                        <input type="text" class="form-control" id="empid" [(ngModel)]="employee.empid" name="empid">
+                    </div> 
+                    <div class="form-group" *ngIf="employee">
+                        <label>First name</label>
+                        <input type="text" class="form-control" id="firstName" [(ngModel)]="employee.empname" name="firstName">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Id</label>
+                        <input type="email" class="form-control" (blur)="validateEmail(employee.emailid)" id="emailId" [(ngModel)]="employee.emailid" name="email" #emailInput>
+                    </div>
+                    <div *ngIf="showEmailError">
+                        <p style="color: red;">Please Enter Valid Email</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Birthday:</label>
+                        <input type="date" id="birthday" name="birthday"  [(ngModel)]="employee.dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" class="form-control" id="Phone" [(ngModel)]="employee.phno" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Select your Gender</label>
+                        <select name="gender" [(ngModel)]="employee.gender" required>
+                            <option value="male">Male</option>
+                            <option value="mfeale">Female</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" class="form-control" id="Location" [(ngModel)]="employee.location" name="Location">
+                    </div>
+                    <div class="form-group">
+                        <label>Salary</label>
+                        <input type="text" class="form-control" id="Salary" [(ngModel)]="employee.salary" name="Salary">
+                    </div>
+                    <div class="form-group">
+                        <label>Unit</label>
+                        <input type="text" class="form-control" id="unit" [(ngModel)]="employee.unit" name="unit">
+                    </div>
+                    <div class="form-group">
+                        <label>Project Code</label>
+                        <input type="text" class="form-control" id="projectCode" [(ngModel)]="employee.projectcode" name="projectCode">
+                    </div>
+                    <div class="form-group">
+                        <label>Asset</label>
+                        <input type="text" class="form-control" id="Asset" [(ngModel)]="employee.isassert" name="Asset">
+                    </div>
+                    <br/>
+                    <button class="btn btn-success" type="submit">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

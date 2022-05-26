@@ -1,0 +1,42 @@
+<!--<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+    <ul>
+        <li>
+            <a routerLink="employees" routerLinkActive="active" class="nav-link"> Employee List</a>
+        </li>
+        <li>
+            <a routerLink="create-employee" routerLinkActive="active" class="nav-link">Add Employee</a>
+        </li>
+    </ul>
+</nav>
+<div class="container">
+    <router-outlet></router-outlet>
+</div> -->
+
+<nav class="navbar sticky-top navbar-expand-lg bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+         aria-controls="navbarSopportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="employees">Employee List <span class="sr-only"></span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="create-employee">Add Employee</a>
+
+                    </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<br>
+    <div class = "container">
+     <router-outlet></router-outlet>
+    </div>
+              

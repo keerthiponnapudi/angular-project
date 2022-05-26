@@ -1,0 +1,53 @@
+<div class="row execlbtn">
+    <div class="col-8">
+    <h2>Employee List</h2>
+    </div>
+    <div class="col-2">
+        <button (click)="generateExcel()"  class="btn btn-secondary mb-2">Export As Excel</button>
+    </div>
+    <div class="col-2">
+      <a href="#OpenModal"><button  class="btn btn-secondary mb-2">Upload As Excel</button></a>
+    </div>
+</div>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th *ngFor=" let header of employee_headers">
+                {{header}}
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngIf="employees.length>0">
+
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.empid}}</td>
+            <td>{{emp.empname}}</td>
+            <td>{{emp.emailid}}</td>
+            <td>{{emp.dob}}</td>
+            <td>{{emp.phno}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.salary}}</td>
+            <td>{{emp.location}}</td>
+            <td>{{emp.isassert}}</td>
+            <td>{{emp.unit}}</td>
+            <td>{{emp.projectcode}}</td>
+            <td>
+                <button  (click) = "updateEmployee(emp.empid)" class = "btn btn-primary"> Update </button>
+                <button  (click)="deleteEmployee(emp.empid)"  class="btn btn-danger" style="margin-left: 10px;"> Delete </button>
+                
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<div id="OpenModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2> Upload File</h2><br>
+        <input type="file" (change)="uploadExcel($event)" accept="aapplication/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+    <br/>
+    <button (click)="submitExcel()" style="margin-top:50px;" class="btn btn-primary mb-2">Submit</button>
+    </div>
+</div>
