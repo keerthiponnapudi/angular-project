@@ -1,42 +1,126 @@
-<!--<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
-    <ul>
-        <li>
-            <a routerLink="employees" routerLinkActive="active" class="nav-link"> Employee List</a>
-        </li>
-        <li>
-            <a routerLink="create-employee" routerLinkActive="active" class="nav-link">Add Employee</a>
-        </li>
-    </ul>
-</nav>
-<div class="container">
-    <router-outlet></router-outlet>
-</div> -->
 
-<nav class="navbar sticky-top navbar-expand-lg bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">logo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-         aria-controls="navbarSopportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <i class="fas fa-bars"></i>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto w-100 justify-content-end">
-
-                <li class="nav-item active">
-                    <a class="nav-link" routerLink="employees">Employee List <span class="sr-only"></span></a>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="create-employee">Add Employee</a>
-
-                    </li>
-
-            </ul>
-
+<div class="container-fluid tool-board">
+    <br>
+    <br/>
+    <p >PARTS OF FILTERS</p>
+    <div class="container-fluid ">
+        <div class="row filters-row">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <p style="margin-top: 15px;">Search By</p>
+                        <mat-form-field appearance="fill">
+                        <select matNativeControl required>
+                            <option value=" ">Pleae Select </option>
+                            <option value="1">value1</option>
+                            <option value="2">value2</option>
+                            <option value="3">value3</option>
+                            
+                        </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col psv" >
+                        <p>PSV</p>
+                        <div>
+                            <mat-checkbox class="">BPP</mat-checkbox>
+                            <div>
+                                <mat-checkbox class="">Standard</mat-checkbox>
+                            </div>
+                            
+                            <mat-checkbox class="">VPP</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col histScore">
+                        <p>HIST PRTZN SCORE</p>
+                        <div class="row">
+                            <div class="col-4">
+                                <mat-checkbox class="">1</mat-checkbox>
+                                <mat-checkbox class="">2</mat-checkbox>
+                                <mat-checkbox class="">3</mat-checkbox>
+                            </div>
+                            <div class="col-4">
+                                <mat-checkbox class="">4</mat-checkbox>
+                                <mat-checkbox class="">5</mat-checkbox>
+                                <mat-checkbox class="">6</mat-checkbox>
+                            </div>
+                            <div class="col-4">
+                                <mat-checkbox class="">7</mat-checkbox>
+                                <mat-checkbox class="">8</mat-checkbox>
+                                <mat-checkbox class="">9</mat-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col status cert-status" >
+                        <p>CERT STATUS</p>
+                        <div>
+                            <mat-checkbox class="">Ready</mat-checkbox>
+                            <mat-checkbox class="">On Hold</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col status" >
+                        <p>CONTRACT STATUS</p>
+                        <div>
+                            <mat-checkbox class="">On Contract</mat-checkbox>
+                            <mat-checkbox class="">Not on Contract</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col status" >
+                        <p>PRODUCTION STATUS</p>
+                        <div>
+                            <mat-checkbox class="">On Production</mat-checkbox>
+                            <mat-checkbox class="">Out of Production</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col demand">
+                        <p>DEMAND CLASS</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <mat-checkbox class="">1</mat-checkbox>
+                                <mat-checkbox class="">2</mat-checkbox>
+                                <mat-checkbox class="">3</mat-checkbox>
+                            </div>
+                            <div class="col-6">
+                                <mat-checkbox class="">4</mat-checkbox>
+                                <mat-checkbox class="">5</mat-checkbox>
+                                <mat-checkbox class="">6</mat-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col status" >
+                        <p>STOCK STATUS</p>
+                        <div>
+                            <mat-checkbox class="">Stock Part</mat-checkbox>
+                            <mat-checkbox class="">Non-stock Part</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col status" >
+                        <p>HIST PARTS CAT</p>
+                        <div>
+                            <mat-checkbox class="">EXP_X</mat-checkbox>
+                            </div>
+                            <div>
+                                <mat-checkbox class="">NSC_SA</mat-checkbox>
+                            </div>
+                            <div>
+                                <mat-checkbox class="">NSC_X</mat-checkbox>
+                            </div>
+                            <div>
+                            <mat-checkbox class="">RLTEXP</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="clear">
+                            <button  mat-raised-button>CLEAR ALL</button>
+                        </div>
+                        <div class="apply">
+                            <button class="apply" mat-raised-button>APPLY FILTERS</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-</nav>
-<br>
-    <div class = "container">
-     <router-outlet></router-outlet>
-    </div>
-              
+
+</div>
+
