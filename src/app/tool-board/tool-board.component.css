@@ -6,6 +6,7 @@
     height: 185px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 .psv{
     margin-left: 15px;
@@ -27,7 +28,7 @@
     font-size: 12px!important;
   }
   .tool-board p {
-      font-size: 11px;
+      font-size: 9px;
       color: #9e9c9c;
   }
   
@@ -45,3 +46,10 @@
     position: relative;
     top: 85px;
 }
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }

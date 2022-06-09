@@ -1,0 +1,253 @@
+<div class="container-fluid tool-board">
+    <br>
+    <br/>
+    <p >PARTS OF FILTERS</p>
+    <div class="container-fluid ">
+        <div class="row filters-row">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <p style="margin-top: 15px;">Search By</p>
+                        <mat-form-field appearance="fill">
+                        <select matNativeControl required>
+                            <option value=" ">Pleae Select </option>
+                            <option value="1">value1</option>
+                            <option value="2">value2</option>
+                            <option value="3">value3</option>
+                            
+                        </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col psv" >
+                        <p>PSV</p>
+                        <div>
+                            <mat-checkbox class="">BPP</mat-checkbox>
+                            <div>
+                                <mat-checkbox class="">Standard</mat-checkbox>
+                            </div>
+                            
+                            <mat-checkbox class="">VPP</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col histScore">
+                        <p>HIST PRTZN SCORE</p>
+                        <div class="row">
+                            <div class="col-4">
+                                <mat-checkbox class="">1</mat-checkbox>
+                                <mat-checkbox class="">2</mat-checkbox>
+                                <mat-checkbox class="">3</mat-checkbox>
+                            </div>
+                            <div class="col-4">
+                                <mat-checkbox class="">4</mat-checkbox>
+                                <mat-checkbox class="">5</mat-checkbox>
+                                <mat-checkbox class="">6</mat-checkbox>
+                            </div>
+                            <div class="col-4">
+                                <mat-checkbox class="">7</mat-checkbox>
+                                <mat-checkbox class="">8</mat-checkbox>
+                                <mat-checkbox class="">9</mat-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col status cert-status" >
+                        <p>CERT STATUS</p>
+                        <div>
+                            <mat-checkbox class="">Ready</mat-checkbox>
+                            <mat-checkbox class="">On Hold</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col status" >
+                        <p>CONTRACT STATUS</p>
+                        <div>
+                            <mat-checkbox class="">On Contract</mat-checkbox>
+                            <mat-checkbox class="">Not on Contract</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col status" >
+                        <p>PRODUCTION STATUS</p>
+                        <div>
+                            <mat-checkbox class="">On Production</mat-checkbox>
+                            <mat-checkbox class="">Out of Production</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col demand">
+                        <p>DEMAND CLASS</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <mat-checkbox class="">1</mat-checkbox>
+                                <mat-checkbox class="">2</mat-checkbox>
+                                <mat-checkbox class="">3</mat-checkbox>
+                            </div>
+                            <div class="col-6">
+                                <mat-checkbox class="">4</mat-checkbox>
+                                <mat-checkbox class="">5</mat-checkbox>
+                                <mat-checkbox class="">6</mat-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col status" >
+                        <p>STOCK STATUS</p>
+                        <div>
+                            <mat-checkbox class="">Stock Part</mat-checkbox>
+                            <mat-checkbox class="">Non-stock Part</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col status" >
+                        <p>HIST PARTS CAT</p>
+                        <div>
+                            <mat-checkbox class="">EXP_X</mat-checkbox>
+                            </div>
+                            <div>
+                                <mat-checkbox class="">NSC_SA</mat-checkbox>
+                            </div>
+                            <div>
+                                <mat-checkbox class="">NSC_X</mat-checkbox>
+                            </div>
+                            <div>
+                            <mat-checkbox class="">RLTEXP</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="clear">
+                            <button  mat-raised-button>CLEAR ALL</button>
+                        </div>
+                        <div class="apply">
+                            <button class="apply" mat-raised-button>APPLY FILTERS</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <p>Result</p>
+    <mat-form-field appearance="standard">
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. abc" #input>
+      </mat-form-field>
+    <table mat-table [dataSource]="dataSource" matSort 
+    class="mat-elevation-z8">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="part_id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Part ID
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.part_id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="part_desc">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
+      Part Desc
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.part_desc}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="supp_name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weight">
+      Supp Name
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.supp_name}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="supp_id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Supp ID
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.supp_id}} </td>
+  </ng-container>
+  <ng-container matColumnDef="on_cont">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      On Cont?
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.on_cont}} </td>
+  </ng-container>
+  <ng-container matColumnDef="cont">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Cont#
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.cont}} </td>
+  </ng-container>
+  <ng-container matColumnDef="cert_status">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Cert Status
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.cert_status}} </td>
+  </ng-container>
+  <ng-container matColumnDef="stock">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Stock
+    <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+  </ng-container>
+  <ng-container matColumnDef="psv">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      PSV
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.psv}} </td>
+  </ng-container>
+  <ng-container matColumnDef="factor">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Factor
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.factor}} </td>
+  </ng-container>
+  <ng-container matColumnDef="disc">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Disc
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.disc}} </td>
+  </ng-container>
+  <ng-container matColumnDef="last_po_cost">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Last PO Cost
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.last_po_cost}} </td>
+  </ng-container>
+  <ng-container matColumnDef="boeing_price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Boeing Price
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.boeing_price}} </td>
+  </ng-container>
+  <ng-container matColumnDef="prod_cost">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Prod Cost
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.prod_cost}} </td>
+  </ng-container>
+  <ng-container matColumnDef="unq_sp_cost">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Unq Sp Cost
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.unq_sp_cost}} </td>
+  </ng-container>
+  <ng-container matColumnDef="sppc_cost">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      SPPC Cost
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.sppc_cost}} </td>
+  </ng-container>
+  <ng-container matColumnDef="appr_cost">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Appr Cost
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.appr_cost}} </td>
+  </ng-container>
+  <ng-container matColumnDef="appr">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Appr 
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.appr}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+
+</div>
