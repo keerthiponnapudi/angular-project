@@ -16,14 +16,19 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import {DashboardComponent } from './dashboard/dashboard.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatExpansionModule} from '@angular/material/expansion';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     ToolBoardComponent,
-    DashboardComponent
+    DashboardComponent,
+    
+    
+   
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatSortModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    
 
   ],
   providers: [],

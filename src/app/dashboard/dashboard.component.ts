@@ -10,10 +10,12 @@ import {MatSort, Sort} from '@angular/material/sort';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements AfterViewInit {
-
-  displayedColumns: string[] = ['supp_name', 'supp_id', 'ltc_parts'];
-  dataSource = new MatTableDataSource<PeriodicElement>(WORKBENCH_DATA);
+displayedColumnsBench: string[] = ['supp_name', 'supp_id', 'ltc_parts'];
+  displayedColumnsAlert: string[]=['name'];
+  dataSourceBench = new MatTableDataSource<PeriodicElement>(WORKBENCH_DATA);
+  alertData = new MatTableDataSource<element>(ALERT_DATA);
   color = '#17D2F7'
+  dataSource1=['Parts co. Contract 000061234 have just been updated']
   
 
  // @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -22,10 +24,11 @@ export class DashboardComponent implements AfterViewInit {
 @ViewChild(MatSort, { static: false }) sort!: MatSort;
 
 
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-  }
+  
+ngAfterViewInit() {
+  this.dataSourceBench.paginator = this.paginator;
+  this.dataSourceBench.sort = this.sort;
+}
 
   constructor() { }
 
@@ -38,6 +41,9 @@ export interface PeriodicElement {
   supp_id: number;
   ltc_parts: number;
 }
+export interface element {
+  name: string;
+}
 const WORKBENCH_DATA: PeriodicElement[] = [
   {supp_name: 'Spirit AeroSystem', supp_id: 123456789, ltc_parts: 300},
   {supp_name: 'Precision Castparts Corp.', supp_id: 234567890, ltc_parts: 250},
@@ -46,4 +52,10 @@ const WORKBENCH_DATA: PeriodicElement[] = [
   {supp_name: 'Safran Cabin', supp_id: 567890123, ltc_parts: 50},
   
   
+];
+const ALERT_DATA:element[]=[
+  {name: "Parts co. Contract 000061234 have just been updated"},
+  {name:"Parts co. Contract 000074652 is about to expire"},
+  {name:"New priority parts have been added to your NOC list"},
+  {name:"Series 46 Contract setup complete for parts co."}
 ];

@@ -29,3 +29,11 @@ table {
 .search{
     margin-bottom: 55px;
 }
+.alertDiv p{
+    color: #17d2f7;
+    line-height: 25px;
+    margin: 20px;
+}
+.alert {
+margin-bottom:0!important;
+}
