@@ -1,0 +1,55 @@
+.tool-board{
+    background: #e3dfdf;
+}
+.filters-row{
+    background: #fff;
+    height: 185px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.psv{
+    margin-left: 15px;
+}
+.cert-status{
+    margin-left: 10px;
+}
+.psv, .histScore, .status, .demand{
+    border-left: 1px solid #ccc;
+    margin-top: 10px;
+}
+::ng-depp .mat-checkbox-label {
+    font-size: 12px!important;
+}
+::ng-deep .mat-checkbox .mat-checkbox-frame {
+    color: violet;
+  }
+  ::ng-deep .mat-checkbox .mat-checkbox-label {
+    font-size: 12px!important;
+  }
+  .tool-board p {
+      font-size: 9px;
+      color: #9e9c9c;
+  }
+  
+ .clear ::ng-deep .mat-raised-button {
+    margin-top: 10px;
+    background: #666464;
+    color: #fff;
+    font-size: 12px;
+    width: 115px;
+}
+ .apply ::ng-deep .mat-raised-button {
+    background: #65e1f1;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    top: 85px;
+}
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }

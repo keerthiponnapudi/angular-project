@@ -1,0 +1,257 @@
+.universal-nav {
+  height: 40px;
+  width: 1470px;
+  }
+
+  .rectangle-copy {
+    height: 40px;
+    width: 1470px;
+    background-color: #212A32;
+    padding-bottom: 1%;
+    position: relative;
+  }
+
+    .supplier-management {
+    height: 36px !important;
+    width: 561px !important;
+    color: #FFFFFF;
+    font-family: "Noto Sans";
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 29px;
+    position: relative;
+    left: 100px;
+    bottom: 25px;
+  }
+  
+  .boeing-logo {
+    height: 48px;
+    width: 210px;
+  }
+
+  .rectangle {
+    height: 40px;
+    width: 1470px;
+    background: linear-gradient(135deg, #0033A1 0%, #009BDF 100%);
+  }
+
+  .apps-icon {
+    height: 21px;
+    width: 21px;
+    bottom: 11px;
+    position: relative;
+    padding-right: 60px;
+    padding-bottom: 6px;    
+  }
+
+  .group-1 {
+    height: 28.05px;
+    width: 40px;
+    position: relative;
+    left: 1200px;
+    top: 3px;
+  }
+
+  .four {
+    height: 2px;
+    width: 4px;
+    padding-left: 4.5px;
+    bottom: 6px;
+    position: relative;
+    color: #FFFFFF;
+    font-family: "Noto Sans";
+    font-size: 7px;
+    letter-spacing: 0;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .group-5 {
+    height: 12px;
+    width: 10px;
+    position: relative;
+    bottom: 15px;
+  }
+
+  .oval {
+    height: 12px;
+    width: 12px;
+    bottom: 27px;
+    left: 9px;
+    background-color: #E4002D;
+    border-radius: 50%
+  }
+  
+  .welcome-cherie {
+    left: 18px;
+    bottom: 22px;
+    height: 22px;
+    width: 200px;
+    color: #FFFFFF;
+    font-family: "Noto Sans";
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 22px;
+    position: relative;
+  }
+
+  .navbar {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: right;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropbtn {
+    //font-size: 16px;  
+    position: relative;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    position: fixed;
+    display: block;
+  }
+
+  .combined-shape {
+    top: 155px;
+    left:1060px;
+    position: relative;
+    height: 386.53px;
+    width: 390px;
+    background-color: #475F74;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15);
+  }
+
+  .combined-shape:before{
+    content:"";
+   position:relative;
+   bottom: 30px;
+   left: 340px;
+   border-right:13px solid transparent;
+   border-left:13px solid transparent;
+   border-bottom:13px solid #475F74;
+  }
+
+  .dropdown-content {
+    float: left;
+    position: relative;
+    display: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+  }
+  
+  .dropdown-content a {
+    float: none;
+    text-decoration: none;
+    display: block;
+  }
+
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+  }
+  
+  li {
+    display: inline-block;
+  }
+  .contract-data-tool {
+    top: 80px;
+    height: 38px;
+    width: 200px;
+    color: #FFFFFF;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.75px;
+    line-height: 16px;
+    text-align: center;
+    position: relative;
+    right: 20px;
+  }
+
+  .dashboard {
+    height: 38px;
+    width: 134px;
+    color: #FFFFFF;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.75px;
+    line-height: 16px;
+    position: relative;
+    left: 210px;
+    top:13px;
+  }
+
+  .access-management {
+    height: 38px;
+    width: 117px;
+    color: #3C3C3C;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.75px;
+    line-height: 16px;
+    text-align: center;
+    position: relative;
+    top: 78px;
+    left:20px
+  }
+
+  .automation-tracking {
+    height: 38px;
+    width: 112px;
+    color: #3C3C3C;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.75px;
+    line-height: 16px;
+    text-align: center;
+    position: relative;
+    left: 210px;
+    top:10px;
+  }
+
+  .contract-data-finder {
+    height: 38px;
+    width: 134px;
+    color: #3C3C3C;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.75px;
+    line-height: 16px;
+    text-align: center;
+    position: relative;
+    left: 110px;
+    top: 45px;
+  }
