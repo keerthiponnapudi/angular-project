@@ -19,6 +19,8 @@ import {MatSortModule} from '@angular/material/sort';
 import {DashboardComponent } from './dashboard/dashboard.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { NavigationComponent } from './navigation/navigation.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -26,6 +28,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     AppComponent,
     ToolBoardComponent,
     DashboardComponent,
+    NavigationComponent,
     
     
    
@@ -46,6 +49,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     BrowserAnimationsModule,
     MatExpansionModule,
     MatPaginatorModule,
+    MatCardModule
     
 
   ],
